@@ -8,7 +8,7 @@ echo "Ensuring build directory..."
 cd build
 
 echo "Running CMake..."
-cmake .. || { echo "CMake configuration failed"; exit 1; }
+cmake .. -DCMAKE_BUILD_TYPE=Debug || { echo "CMake configuration failed"; exit 1; }
 
 echo "Building project..."
 make || { echo "Build failed"; exit 1; }
